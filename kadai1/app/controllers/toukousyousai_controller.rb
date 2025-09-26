@@ -1,0 +1,2 @@
+class ToukousyousaiController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class ToukouhennsyuController < ApplicationController
+end

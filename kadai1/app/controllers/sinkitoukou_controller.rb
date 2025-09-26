@@ -1,0 +1,2 @@
+class SinkitoukouController < ApplicationController
+end

@@ -1,0 +1,11 @@
+<h1>記事登録</h1>
+<%= form_with model: @article, url: articles_create_path do |f| %>
+  <div>
+      <p>タイトル: <%= f.text_field :title %></p>
+      <p>コンテンツ: <%= f.text_field :content %></p>
+  </div>
+  
+  <%= f.submit '登録' %>
+<% end %>
+
+<%= link_to "一覧ページ", root_path %>

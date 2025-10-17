@@ -1,2 +1,8 @@
 <h1>Articles#show</h1>
+<div>
+      <p>タイトル: <%= @article.title %></p>
+      <p>コンテンツ: <%= @article.content %></p>
+  </div>
+<%= link_to "一覧ページ", root_path %>
+<%= link_to "編集", article_edit_path(@article) %>
 <p>Find me in app/views/articles/show.html.erb</p>

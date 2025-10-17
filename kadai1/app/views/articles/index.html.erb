@@ -1,10 +1,10 @@
 <h1>一覧ページ</h1>
 <% @article.each do |article| %>
   <div>
-    <p>名前: <%= article.title %></p>
-    <p>苗字: <%= article.content %></p>
+    <p>タイトル: <%= article.title %></p>
+    <p>投稿内容: <%= article.content %></p>
   </div>
-
+  <%= link_to "詳細", article_path(article)%>
   <hr> <!-- 水平線で区切る -->
 <% end %>
 

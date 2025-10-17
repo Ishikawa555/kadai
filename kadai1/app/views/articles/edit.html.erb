@@ -1,2 +1,13 @@
-<h1>Articles#edit</h1>
-<p>Find me in app/views/articles/edit.html.erb</p>
+
+<%= form_with(model: @article, local: true) do |f| %>
+<div>
+       <p>タイトル: <%= f.text_field :title %></p>
+  </div>
+
+<div>
+      <p>コンテンツ: <%= f.text_field :content %></p>
+  </div>  
+<div>
+    <%= f.submit "更新" %>
+  </div>
+<% end %>  

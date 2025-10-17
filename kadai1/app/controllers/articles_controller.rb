@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-     article = Article.new(user_params)
+     article = Article.new(articles_params)
 
      if article.save
        redirect_to root_path
@@ -15,15 +15,26 @@ class ArticlesController < ApplicationController
 
    
 
-
+   
   def index
+    @article = Article.all
   end
 
   def show
+    @article = Article.find(params[:id])
   end
 
   def edit
+    @article = Article.find(params[:id])
   end
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(articles_params)
+      redirect_to show_path
+    else
+      render :edit
+    end
+  end  
 
   private
 

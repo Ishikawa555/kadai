@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   get "articles/:id", to: 'articles#show', as: 'article'
   get "articles/:id/edit",to: 'articles#edit', as: 'article_edit'
-  patch 'articles/:id', to: 'artcles#update'
+  patch 'articles/:id', to: 'articles#update'
+  resources :articles
+
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
